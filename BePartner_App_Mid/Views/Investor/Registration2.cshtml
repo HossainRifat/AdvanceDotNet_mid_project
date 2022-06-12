@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Registration2";
+}
+
+<h2>Registration2</h2>
+
+<form action="" method="post">
+
+    <label>Organization's' Name:</label>
+    <input type="text" name="OrgName" value="@(Model!=null? Model.OrgName:"")" class="form-control">
+    @Html.ValidationMessage("OrgName")<br />
+
+    <label>Established date:</label>
+    <input type="date" name="OrgEstablished" value="@(Model!=null? Model.OrgEstablished:"")" class="form-control">
+    @Html.ValidationMessage("OrgEstablished")<br />
+
+    <label>Organization's' email:</label>
+    <input type="email" name="OrgEmail" value="@(Model!=null? Model.OrgEmail:"")" class="form-control">
+    @Html.ValidationMessage("OrgEmail")<br />
+
+    <label>Organization's phone:</label>
+    <input type="tel" name="OrgPhone" value="@(Model!=null? Model.OrgPhone:"")" class="form-control">
+    @Html.ValidationMessage("OrgPhone")<br />
+
+    <label>Organization license number:</label>
+    <input type="text" name="OrgLicense" value="@(Model!=null? Model.OrgLicense:"")" class="form-control">
+    @Html.ValidationMessage("OrgLicense")<br />
+
+    <label>Tax identification number:</label>
+    <input type="text" name="Tin" value="@(Model!=null? Model.Tin:"")" class="form-control">
+    @Html.ValidationMessage("Tin")<br />
+
+    <label>Organization's Site:</label>
+    <input type="text" name="OrgSite" value="@(Model!=null? Model.OrgSite:"")" class="form-control">
+    @Html.ValidationMessage("OrgSite")<br />
+
+    <label>Organization Address:</label>
+    <textarea class="form-control" rows="5" name="OrgLocation" placeholder="Enter your full address.." value="@(Model!=null? Model.OrgLocation:"")"></textarea>
+    @Html.ValidationMessage("OrgLocation")<br />
+
+    <input type="Submit" class="btn btn-success">
+
+</form>
+
+
