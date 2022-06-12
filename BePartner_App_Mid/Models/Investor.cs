@@ -41,7 +41,8 @@ namespace BePartner_App_Mid.Models
         public string OrgName { get; set; }
 
         [Required(ErrorMessage = "Established date required")]
-        public int OrgEstablished { get; set; }
+        [CustomValidation.OrgEstValid]
+        public DateTime OrgEstablished { get; set; }
 
         [Required(ErrorMessage = "Organization location required")]
         [StringLength(5000, MinimumLength = 5, ErrorMessage = "Invalid! Full address required")]
